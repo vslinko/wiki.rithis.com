@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @item[:title] %> - Rithis Studio Wiki</title>
+
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" />
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

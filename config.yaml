@@ -1,0 +1,3 @@
+watcher:
+  dirs_to_watch: ['content', 'layouts', 'lib']
+  files_to_watch: ['config.yaml', 'Rules']

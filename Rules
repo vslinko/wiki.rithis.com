@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+compile '/vendor/*' do
+end
+
+route '/vendor/*' do
+  item.identifier.chop + '.' + item[:extension]
+end
+
+compile '*' do
+  if not item.binary?
+    filter :erb
+    filter :kramdown
+    layout 'default'
+  end
+end
+
+route '*' do
+  if item.binary?
+    item.identifier.chop + '.' + item[:extension]
+  else
+    item.identifier + 'index.html'
+  end
+end
+
+layout '*', :erb
